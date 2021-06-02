@@ -1,9 +1,14 @@
 import './App.scss';
+import Header from './components/Header';
+import ProductSearch from './components/ProductSearch';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome To Buy More..</h1>
+      <Header></Header>
+      <div class="banner">
+        <ProductSearch></ProductSearch>
+      </div>
     </div>
   );
 }
