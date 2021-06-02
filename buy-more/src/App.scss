@@ -37,13 +37,15 @@ body, ul{
   position: relative;
   @include display-flex(flex, center, center, column);
   .search-box{
-    min-width: 550px;
     padding: 10px;
     outline: none;
     font-size: 1em;
     color: #fff;
     border: 1px solid #FFF;
     background: rgba(255, 255, 255, 0.45);
+    @media (min-width: 767px){
+      min-width: 550px;
+    }
   }
   &::after{
     content: "";
@@ -54,6 +56,15 @@ body, ul{
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 1;
+  }
+  .submit-btn{
+    width: 40px;
+    height: 41px;
+    outline: none;
+    border: 1px solid #fff;
+    background: url('/assets/search-icon.png') no-repeat 6px 7px #FCCD1E;
+    display: inline-block;
+    margin-left: 5px;
   }
 }
 .banner > * {
