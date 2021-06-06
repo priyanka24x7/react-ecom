@@ -1,18 +1,23 @@
 import './App.scss';
 import Header from './components/Header';
 import ProductSearch from './components/ProductSearch';
-import ProductList from './components/products/Product-list';
 import Navigation from './components/Navigation';
+import ProductsContextProvider from './Global/ProductsContext';
+import ProductList from './components/products/Product-list';
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <Navigation></Navigation>
-      <div class="banner">
-        <ProductSearch></ProductSearch>
+      <Header/>
+      <Navigation/>
+      <div className="banner">
+        <ProductSearch/>
       </div>
-      <ProductList></ProductList>
+      <div className="container">
+        <ProductsContextProvider>
+          <ProductList/>
+        </ProductsContextProvider>
+      </div>
     </div>
   );
 }

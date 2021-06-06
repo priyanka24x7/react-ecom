@@ -6,4 +6,28 @@
         font-weight: normal;
         text-align: center;
     }
+    .products{
+        width: 200px;
+        padding: 1em;
+        border: 1px solid #B2B2B2;
+        margin: 10px;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        .name{
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            span{
+                font-weight: normal;
+            }
+        }
+        .price{
+            color: #999;
+        }
+    }
+    .p-wrapper{
+        display: flex;
+    }
 }

@@ -8,6 +8,11 @@ body, ul{
   align-items: $align;
   flex-direction: $direction;
 }
+.container{
+  width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
 .header-wrapper{
   @include display-flex(flex, center, center, column);
   img{
