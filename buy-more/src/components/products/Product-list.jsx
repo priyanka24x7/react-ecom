@@ -18,6 +18,10 @@ function ProductList() {
               </div>
               <div className="name">{product.productName}<span>({product.weight})</span></div>
               <div className="price">₹{product.unitPrice}</div>
+              <em className="tax">(Inclusive of all taxes)</em>
+              <div className="add-to-cart">
+                <button type="button">Add To Cart</button>
+              </div>
             </div>
           ))
         }
