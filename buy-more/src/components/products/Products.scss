@@ -7,7 +7,7 @@
         text-align: center;
     }
     .products{
-        width: 200px;
+        width: 220px;
         padding: 1em;
         margin: 10px;
         box-shadow: rgb(221 221 221) 0px 0px 10px;
@@ -58,4 +58,20 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+.main-container{
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 30px 20px;
+    .category-section{
+        li{
+            list-style-type: none;
+            line-height: 50px;
+            border-bottom: 1px solid #ddd;
+            width: 230px;
+            display: block;
+        }
+    }
+
 }
