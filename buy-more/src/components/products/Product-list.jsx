@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import '../products/Products.scss';
 import {ProductsContext} from '../../Global/ProductsContext';
 import ProductsCat from './ProductCategories';
+import CategoriesContextProvider from '../../Global/CategoriesContext';
 
 function ProductList() {
   const {list} = useContext(ProductsContext);
@@ -10,7 +11,9 @@ function ProductList() {
     <div className="list-wrapper">
         <h3>Products</h3>
         <div className="main-container d-flex">
+          <CategoriesContextProvider>
             <ProductsCat />
+            </CategoriesContextProvider>
         <div className="p-wrapper">
         {
           list.map((product) => (

@@ -4,6 +4,7 @@ import {getProducts} from '../Services/Product';
 export const ProductsContext = createContext();
 
 const ProductsContextProvider = (props) =>{
+    console.log("products");
     const [list, setList] = useState([]);
 
     useEffect(() => {
