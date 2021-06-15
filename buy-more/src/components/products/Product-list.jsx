@@ -2,22 +2,18 @@ import React, { useContext } from 'react';
 import '../products/Products.scss';
 import {ProductsContext} from '../../Global/ProductsContext';
 import ProductsCat from './ProductCategories';
-import CategoriesContextProvider from '../../Global/CategoriesContext';
 
 function ProductList() {
   const {list} = useContext(ProductsContext);
-  console.log(list);
   return (
     <div className="list-wrapper">
         <h3>Products</h3>
         <div className="main-container d-flex">
-          <CategoriesContextProvider>
             <ProductsCat />
-            </CategoriesContextProvider>
         <div className="p-wrapper">
         {
-          list.map((product) => (
-            <div className="products">
+          list.map((product,index) => (
+            <div className="products" key={index}>
               <div key={product.categoryId}></div>
               <div className="g-img">
                 <img src={product.productImage} alt="dals"/>

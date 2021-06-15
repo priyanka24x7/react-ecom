@@ -1,21 +1,30 @@
 import React, {createContext, useEffect, useState} from 'react';
 import {getProducts} from '../Services/Product';
-
+import {getCategories} from '../Services/Product';
 export const ProductsContext = createContext();
 
 const ProductsContextProvider = (props) =>{
-    console.log("products");
+    //State for product list
     const [list, setList] = useState([]);
 
+    //State for Categories
+    const [categories, setCategories] = useState([]);
+    // console.log(categories);
     useEffect(() => {
      getProducts()
        .then(items => {
            setList(items)
+       });
+       getCategories()
+       .then(cat => {
+        setCategories(cat)
        })
    }, [])
     return(
-        <ProductsContext.Provider value={{list: [...list]}}>
-            {props.children}
+        <ProductsContext.Provider 
+                value={{list: [...list], 
+                categories: [...categories]}}>
+        {props.children}
         </ProductsContext.Provider>
     )
 }

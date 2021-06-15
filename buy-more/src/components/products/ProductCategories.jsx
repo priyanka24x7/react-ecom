@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
-import { CategoriesContext } from '../../Global/CategoriesContext';
+import { ProductsContext } from '../../Global/ProductsContext';
 
 function CategoryList() {
-    const {list} = useContext(CategoriesContext);
-    console.log(list);
+    const {categories} = useContext(ProductsContext);
     return(
         <>
             <div className="category-section">
                 <ul>
                     {
-                        list.map((category) =>(
-                            <li>{category.categoryName}</li>
+                        categories.map((category,index) =>(
+                            <li key={index}>{category.categoryName}</li>
                         ) )
                     }
                            
