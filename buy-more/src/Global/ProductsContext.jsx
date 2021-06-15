@@ -1,6 +1,5 @@
 import React, {createContext, useEffect, useState} from 'react';
-import {getProducts} from '../Services/Product';
-import {getCategories} from '../Services/Product';
+import {getProducts,getCategories} from '../Services/Product';
 export const ProductsContext = createContext();
 
 const ProductsContextProvider = (props) =>{
